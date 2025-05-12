@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { Roboto, Lato } from 'next/font/google'
+import { Inter, Lato } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 
-const roboto = Roboto({
+const inter = Inter({
   weight: '400',
   subsets: ['latin'],
   display: 'swap',
@@ -26,12 +26,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang='en'
-      className='h-full'>
-      <body className={cn('h-full font-sans antialiased', lato.className)}>
-        <main className='flex flex-col min-h-screen bg-zinc-50'>
-          <div className='flex-1 flex-grow w-full p-4 mx-auto bg-white min-w-[320px] max-w-[1600px]'>{children}</div>
+    <html lang='en'>
+      <body className={cn(' font-sans antialiased', inter.className)}>
+        <main className='flex min-h-screen bg-zinc-50'>
+          <div className='w-full p-4 mx-auto bg-white min-w-[320px] max-w-[1600px]'>{children}</div>
         </main>
       </body>
     </html>

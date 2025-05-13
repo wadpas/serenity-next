@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Lato } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
+import Header from '@/components/layout/Header'
 
 const inter = Inter({
   weight: '400',
@@ -16,8 +17,8 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: 'Freedom',
-  description: 'Freedom store',
+  title: 'Parallel',
+  description: 'Parallel store',
 }
 
 export default function RootLayout({
@@ -27,9 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={cn(' font-sans antialiased', inter.className)}>
-        <main className='flex min-h-screen bg-zinc-50'>
-          <div className='w-full p-4 mx-auto bg-white min-w-[320px] max-w-[1600px]'>{children}</div>
+      <body className={cn('font-sans antialiased', inter.className)}>
+        <Header />
+        <main className='flex flex-col min-h-screen bg-primary-foreground'>
+          <div className='flex-1 w-full p-4 mx-auto bg-background min-w-[320px] max-w-[1600px]'>{children}</div>
         </main>
       </body>
     </html>

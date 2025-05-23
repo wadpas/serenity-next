@@ -8,10 +8,10 @@ export default function Logo() {
         width={0}
         height={0}
         priority
-        alt='Picture of the author'
-        className='object-cover w-auto h-8 max-w-none'
+        alt='Wonder logo'
+        className='object-cover w-auto h-10 max-w-none bg-primary-foreground rounded-full'
       />
-      <p className='text-2xl italic'>WONDER</p>
+      <p className='text-2xl italic font-bold'>WONDER</p>
     </div>
   )
 }

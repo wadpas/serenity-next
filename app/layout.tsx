@@ -1,8 +1,9 @@
+import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Lato } from 'next/font/google'
-import './globals.css'
 import { cn } from '@/lib/utils'
-import Header from '@/components/layout/Header'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 const inter = Inter({
   weight: '400',
@@ -17,8 +18,8 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: 'Parallel',
-  description: 'Parallel store',
+  title: 'Wonder',
+  description: 'Wonder booking',
 }
 
 export default function RootLayout({
@@ -30,9 +31,10 @@ export default function RootLayout({
     <html lang='en'>
       <body className={cn('font-sans antialiased', inter.className)}>
         <Header />
-        <main className='flex flex-col min-h-screen bg-primary-foreground'>
-          <div className='flex-1 w-full p-4 mx-auto bg-background min-w-[320px] max-w-[1600px]'>{children}</div>
+        <main className='flex flex-col min-h-screen bg-primary-foreground min-w-xs'>
+          <div className='flex-1 w-full p-4 mx-auto bg-background max-w-[1600px]'>{children}</div>
         </main>
+        <Footer />
       </body>
     </html>
   )

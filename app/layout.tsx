@@ -2,8 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Lato } from 'next/font/google'
 import { cn } from '@/lib/utils'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import Footer from '@/components/layout/Footer'
+import Header from '@/components/layout/Header'
 
 const inter = Inter({
   weight: '400',

@@ -2,16 +2,16 @@ import Image from 'next/image'
 
 export default function Logo() {
   return (
-    <div className='flex items-center gap-2'>
+    <div className='flex items-center gap-3'>
       <Image
-        src='/wonder.svg'
+        src='/serenity.svg'
         width={0}
         height={0}
         priority
-        alt='Wonder logo'
-        className='object-cover w-auto h-10 max-w-none bg-primary-foreground rounded-full'
+        alt='Serenity logo'
+        className='object-cover w-auto h-8 max-w-none '
       />
-      <p className='text-2xl italic font-bold'>WONDER</p>
+      <p className='text-2xl font-bold'>SERENITY</p>
     </div>
   )
 }

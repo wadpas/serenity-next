@@ -9,7 +9,7 @@ export default function NavLink({ children, href }: { children: string; href: st
   return (
     <Link
       href={href}
-      className={cn('hover:font-bold', pathname === href && 'text-blue-300 font-extrabold')}>
+      className={cn('hover:font-bold', pathname === href && 'text-primary font-bold')}>
       {children}
     </Link>
   )

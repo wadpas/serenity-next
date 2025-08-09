@@ -1,33 +1,26 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter, Lato } from 'next/font/google'
-import { cn } from '@/lib/utils'
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "@/assets/styles/globals.css"
+import { APP_DESCRIPTION, APP_NAME, SERVER_URL } from "@/lib/constants"
 
 const inter = Inter({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-const lato = Lato({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
+  subsets: ["latin"],
 })
 
 export const metadata: Metadata = {
-  title: 'Serenity',
-  description: 'Serenity booking',
+  title: APP_NAME,
+  description: APP_DESCRIPTION,
+  metadataBase: new URL(SERVER_URL),
 }
 
-export default function AppLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
-      <body className={cn('font-sans antialiased', inter.className)}>{children}</body>
+    <html lang="en">
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   )
 }

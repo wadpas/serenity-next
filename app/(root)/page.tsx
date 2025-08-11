@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 
 const Homepage = () => {
   return (
@@ -6,7 +6,7 @@ const Homepage = () => {
       <Button>Test</Button>
       <div className="text-red-500">Hello</div>
     </div>
-  );
-};
+  )
+}
 
-export default Homepage;
+export default Homepage
